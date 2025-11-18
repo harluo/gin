@@ -12,7 +12,7 @@ type Engine struct {
 }
 
 func newEngine(config *config.Server) (engine *Engine, err error) {
-	handler := gin.Default()
+	handler := gin.New()
 
 	server := new(http.Server)
 	server.Addr = config.Addr()
